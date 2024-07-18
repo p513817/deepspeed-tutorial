@@ -1,0 +1,7 @@
+deepspeed
+transformers[torch] 
+datasets
+coloredlogs
+psutil
+matplotlib
+streamlit
