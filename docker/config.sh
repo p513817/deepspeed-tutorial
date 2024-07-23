@@ -21,3 +21,7 @@ else
 fi
 
 echo "Docker Image Name: $DOCKER_IMAGE"
+
+# Use the value of the CNTR environment variable if set, otherwise default to REPO
+CNTR=${CNTR:-$REPO}
+echo "Docker Container Name: ${CNTR}"
