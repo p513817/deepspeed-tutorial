@@ -8,8 +8,8 @@ Deep Speed Tutorial For Newbie
 
 # Setup
 1. Prepare the token configuration
-    a. Copy config/secret.json -> config/{user}.json
-    b. Modify token in config/{user}.json
+    1. Copy `config/secret.json` -> `config/{user}.json`
+    2. Modify token in `config/{user}.json`
 
 2. Build Docker Image and Run Container with custom token
     ```bash
