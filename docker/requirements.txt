@@ -1,7 +1,16 @@
-deepspeed
-transformers[torch] 
-datasets
-coloredlogs
+# HuggingFace & Deep Speed
+transformers[torch]==4.42
+huggingface_hub==0.24
+datasets==2.20
+deepspeed==0.14
+peft==0.11
+# WanDB
 psutil
-matplotlib
-streamlit
+pynvml
+wandb
+gymnasium
+# Other Utils
+coloredlogs
+pydantic
+
+
