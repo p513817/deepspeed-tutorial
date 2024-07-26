@@ -25,12 +25,11 @@ CFG_DIR=${CFG_DIR:-"configs"}
 # Loop through each json config and run the specified command
 for config_path in $(get_configs); do
     config_name=$(parser_config_name "$config_path")
-    if [ "$DEBUG" == true ]; then
-        echo "RUN_NAME=${config_name} DS_CONFIG=${config_path} ds --num_gpus 2 ${DS_EXEC}"
-    else
-        if [ ! -d "$LOG_DIR" ]; then
-            mkdir -p $LOG_DIR
-        fi
-        RUN_NAME=${config_name} DS_CONFIG=${config_path} ds --num_gpus 2 ${DS_EXEC} > ${LOG_DIR}/${config_name}.log
+
+    echo "RUN_NAME=${config_name} DS_CONFIG=${config_path} ds --num_gpus 2 ${DS_EXEC}"
+    echo ""
+    if [ ! -d "$LOG_DIR" ]; then
+        mkdir -p $LOG_DIR
     fi
+    RUN_NAME=${config_name} DS_CONFIG=${config_path} ds --num_gpus 2 ${DS_EXEC} 2>&1 > ${LOG_DIR}/${config_name}.log
 done
